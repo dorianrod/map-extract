@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="<%- lang %>" lang="<%- lang %>">
+<head>
+    <title><%= title %></title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <h1 class="h1"><%= tocTitle %></h1>
+    <nav class="toc" epub:type="toc">
+    <% Object.keys(pages).forEach(function(traceName){ %>
+        <h2 class="h2"><%= traceName %></h2>
+        <ol>
+            <% pages[traceName].forEach(function(content, index){ %>
+                <li class="table-of-content">
+                    <a class="toc-link" href="<%= content.href %>">
+                        <%= content.distCumStart %> - <%= content.distCumEnd %>
+                        <small class="toc-trace"> | <%= content.trace %></small>
+                    </a>
+                </li>
+            <% }) %>
+        </ol>
+    <% }) %>
+    </nav>
+</body>
+</html>

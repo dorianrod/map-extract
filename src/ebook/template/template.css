@@ -1,0 +1,28 @@
+.epub-author {
+    color: #555;
+}
+.epub-link {
+    margin-bottom: 30px;
+}
+.epub-link a {
+    color: #666;
+    font-size: 90%;
+}
+
+
+.toc-trace {
+    font-size: 90%;
+    color: #999;
+}
+.toc-link {
+    color: #000;
+    font-size: 100%;
+    display: block;
+    text-decoration: none;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid #dedede;
+    margin: 60px 10%;
+}
