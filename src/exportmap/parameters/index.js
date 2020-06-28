@@ -47,7 +47,7 @@ export class Parameters extends React.PureComponent {
 				<input type="number" min={0} max={18} onChange={(e)=>this.onChange("zoom", parseInt(e.target.value))} defaultValue={this.props.zoom} ></input>
 			</div>
 			<div>
-				<label>Greyscale (needed for some ebook readers)</label>
+				<label>Greyscale and increase constrast</label>
 				<input type="checkbox" onChange={(e)=>{
 					this.onChange("greyscale", e.target.checked)
 				}} defaultChecked={this.props.greyscale} ></input>
